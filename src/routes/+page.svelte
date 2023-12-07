@@ -45,14 +45,14 @@
 	{#if randomQuestionnaire}
 		<div class="flex flex-col items-center gap-14 w-3/5">
 			<div class="flex flex-col gap-4 text-center">
-				<div class="flex flex-col gap-2">
+				<div class="flex flex-row gap-2">
 					<p class="text-xl font-bold">Robin og Anders foreslår denne:</p>
 					<div>
 						<a
 							href={randomQuestionnaire.href}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-xl font-semibold underline hover:text-blue-600 text-red-500"
+							class="text-xl font-semibold underline hover:text-blue-500 text-blue-600"
 						>
 							{randomQuestionnaire.name}
 						</a>
@@ -61,7 +61,8 @@
 				<div>
 					<button
 						class="bg-gray-800 text-white rounded-md py-2 px-2 hover:brightness-90"
-						on:click={() => (randomQuestionnaire = getRandomQuestionnaire())}>Få ny quiz</button
+						on:click={() => (randomQuestionnaire = getRandomQuestionnaire())}
+						>Få ny anbefaling</button
 					>
 				</div>
 			</div>
@@ -77,17 +78,21 @@
 					</button>
 				</div>
 				{#if showAllQuestionnaires}
-					<div class="flex flex-col gap-2" transition:slide>
-						{#each QUESTIONNAIRE_LINKS as { name, href }}
-							<a
-								{href}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="text-lg font-semibold underline hover:text-blue-600"
-							>
-								{name}
-							</a>
-						{/each}
+					<div transition:slide>
+						<ul class="flex flex-col gap-2">
+							{#each QUESTIONNAIRE_LINKS as { name, href }}
+								<li>
+									<a
+										{href}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="text-md font-semibold underline hover:text-blue-500 text-blue-600"
+									>
+										{name}
+									</a>
+								</li>
+							{/each}
+						</ul>
 					</div>
 				{/if}
 			</div>
