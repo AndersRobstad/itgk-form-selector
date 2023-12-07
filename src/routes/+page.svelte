@@ -38,7 +38,7 @@
 	</h1>
 </header>
 <main
-	class="px-12 py-10 flex flex-row h-[80vh]"
+	class="px-12 py-10 flex flex-row h-[80vh] max-md:flex-col max-md:items-center max-md:gap-10"
 	class:justify-center={randomQuestionnaire === undefined}
 >
 	{#if randomQuestionnaire}
