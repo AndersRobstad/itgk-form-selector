@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import meme from './testtest.jpeg';
+	import meme from './shinyMeme.jpg';
+	import snurrix from './snurrix.gif';
 
 	type Link = {
 		name: string;
@@ -32,13 +33,13 @@
 	});
 </script>
 
-<header class="h-38 py-8 text-center flex flex-col gap-2 border-b border-b-gray-700">
+<header class="h-[10vh] py-8 text-center flex flex-col gap-2 border-b border-b-gray-700">
 	<h1 class="scroll-m-20 text-3xl font-extrabold tracking-tight">
 		ITGK (4109 og 4110) eksamensspørsmål
 	</h1>
 </header>
 <main
-	class="px-12 py-10 flex flex-row h-[80vh] max-md:flex-col max-md:items-center max-md:gap-10"
+	class="px-12 py-10 flex flex-row h-[90vh] max-md:flex-col max-md:items-center max-md:gap-10"
 	class:justify-center={randomQuestionnaire === undefined}
 >
 	{#if randomQuestionnaire}
@@ -91,7 +92,7 @@
 				{/if}
 			</div>
 		</div>
-		<img src={meme} class="!h-[400px]" alt="" />
+		<img src={meme} class="!h-[400px] mix-blend-multiply" alt="" />
 	{:else}
 		<div
 			class="animate-pulse rounded-md bg-gray-300 w-4/5 h-[400px] rounded-full"
@@ -99,4 +100,8 @@
 			style:border-radius="5px"
 		/>
 	{/if}
+	<img src={snurrix} class="h-[20px] mix-blend-multiply absolute top-0 right-0" alt="snurrix" />
+	<img src={snurrix} class="h-[20px] mix-blend-multiply absolute top-0 left-0" alt="snurrix" />
+	<img src={snurrix} class="h-[20px] mix-blend-multiply absolute bottom-0 left-0" alt="snurrix" />
+	<img src={snurrix} class="h-[20px] mix-blend-multiply absolute bottom-0 right-0" alt="snurrix" />
 </main>
