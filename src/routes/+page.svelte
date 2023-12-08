@@ -11,7 +11,7 @@
 
 	const QUESTIONNAIRE_LINKS: Link[] = [
 		{ name: 'Spørsmålssett 1', href: 'https://forms.gle/afEtuJFsyGH1PvH37' },
-		{ name: 'Spørsmålssett 2', href: 'https://forms.gle/afEtuJFsyGH1PvH37' },
+		{ name: 'Spørsmålssett 2', href: 'https://forms.gle/Bz11mEY3o5y7SWjs6' },
 		{ name: 'Spørsmålssett 3', href: 'https://forms.gle/LcKXsQu5wMwPQphQ6' },
 		{ name: 'Spørsmålssett 4', href: 'https://forms.gle/No4JW7a6rGgLQ6yc6' },
 		{ name: 'Spørsmålssett 5', href: 'https://forms.gle/FEXVpxQNp7hLNF648' }
